@@ -1,0 +1,17 @@
+<div class="base-page">
+    <h1>{{ pageTitle }}</h1>
+    <form [formGroup]="form">
+      <input formControlName="search" placeholder="Search..." />
+      <button type="button" (click)="submit()">Search</button>
+    </form>
+    <div class="carousel">
+      <div class="carousel-items">
+        <div class="carousel-item" *ngFor="let item of items">
+          <img [src]="item.image" alt="Item Image">
+          <p>{{ item.title }}</p>
+          <p>{{ item.subtitle }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
