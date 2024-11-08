@@ -14,7 +14,7 @@ public class Filme {
 
     private String titulo;
     private String genero;
-    private int ano;
+    private String ano;
     private double avaliacao;
     private String imdbId;
     private String imageUrl;
@@ -22,7 +22,7 @@ public class Filme {
 
     public Filme() {}
 
-    public Filme (String titulo, String genero, int ano,
+    public Filme (String titulo, String genero, String ano,
                   double avaliacao, String imdbId,
                   String imageUrl, int duracao) {
 
@@ -62,11 +62,11 @@ public class Filme {
         this.genero = genero;
     }
 
-    public int getAno() {
+    public String getAno() {
         return ano;
     }
 
-    public void setAno(int ano) {
+    public void setAno(String ano) {
         this.ano = ano;
     }
 

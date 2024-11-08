@@ -1,44 +1,29 @@
-package com.tech.ada.spring_cinestream.model;
+package com.tech.ada.spring_cinestream.dto.response;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
-@Entity
-public class Serie {
-
-    @Id
-    @GeneratedValue (strategy =GenerationType.IDENTITY)
-    private Long id;
-
+public class SerieResponse {
     private String titulo;
     private String genero;
     private int ano;
     private double avaliacao;
-    private String imdbId;
     private String imageUrl;
     private int temporadas;
 
-    public Serie() {}
-
-    public Serie(String titulo, String genero, int ano, double avaliacao, String imdbId, String imageUrl, int temporadas) {
+    public SerieResponse(String titulo, String genero, int ano, double avaliacao, String imageUrl, int temporadas) {
         this.titulo = titulo;
         this.genero = genero;
         this.ano = ano;
         this.avaliacao = avaliacao;
-        this.imdbId = imdbId;
         this.imageUrl = imageUrl;
         this.temporadas = temporadas;
     }
 
 
-    public Long getId() {
-        return id;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
     public String getGenero() {
@@ -65,14 +50,6 @@ public class Serie {
         this.avaliacao = avaliacao;
     }
 
-    public String getImdbId() {
-        return imdbId;
-    }
-
-    public void setImdbId(String imdbId) {
-        this.imdbId = imdbId;
-    }
-
     public String getImageUrl() {
         return imageUrl;
     }
@@ -87,13 +64,5 @@ public class Serie {
 
     public void setTemporadas(int temporadas) {
         this.temporadas = temporadas;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
     }
 }

@@ -24,8 +24,8 @@ public class FilmeService {
         return filmeRepository.findById(id);
     }
 
-//    public Filme saveFilmes(Filme filme) {
-//        return filmeRepository.save(movie);
-//    }
+    public Filme saveFilme(Filme filme) {
+        return filmeRepository.save(filme);
+    }
 
 }
