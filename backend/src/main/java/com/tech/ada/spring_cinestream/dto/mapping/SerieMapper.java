@@ -5,8 +5,7 @@ import com.tech.ada.spring_cinestream.model.Serie;
 
 public class SerieMapper {
     public SerieResponse toResponse(Serie serie) {
-        return new SerieResponse(serie.getTitulo(), serie.getGenero(),
-                serie.getAno(), serie.getAvaliacao(),
-                serie.getImageUrl(), serie.getTemporadas());
+        return new SerieResponse(serie.getGenerosId(), serie.getImdbId(), serie.getTitulo(),
+                serie.getDescricao(), serie.getDataLancamento(),serie.getAvaliacao(), serie.getQuantidadeVotos(),serie.getImageUrl());
     }
 }

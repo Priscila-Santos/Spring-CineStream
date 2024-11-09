@@ -1,68 +1,96 @@
 package com.tech.ada.spring_cinestream.dto.response;
 
+import com.fasterxml.jackson.databind.PropertyNamingStrategies;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
+
+import java.util.List;
+
+
+@JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 public class SerieResponse {
-    private String titulo;
-    private String genero;
-    private int ano;
-    private double avaliacao;
-    private String imageUrl;
-    private int temporadas;
+    private List<Integer> genreIds;
+    private Integer id;
+    private String name;
+    private String overview;
+    private String firstAirDate;
+    private double voteAverage;
+    private Integer voteCount;
+    private String posterPath;
 
-    public SerieResponse(String titulo, String genero, int ano, double avaliacao, String imageUrl, int temporadas) {
-        this.titulo = titulo;
-        this.genero = genero;
-        this.ano = ano;
-        this.avaliacao = avaliacao;
-        this.imageUrl = imageUrl;
-        this.temporadas = temporadas;
+    public SerieResponse() {}
+
+    public SerieResponse(List<Integer> genreIds, Integer id, String name, String overview, String firstAirDate, double voteAverage, Integer voteCount, String posterPath) {
+        this.genreIds = genreIds;
+        this.id = id;
+        this.name = name;
+        this.overview = overview;
+        this.firstAirDate = firstAirDate;
+        this.voteAverage = voteAverage;
+        this.voteCount = voteCount;
+        this.posterPath = posterPath;
     }
 
-
-    public String getTitulo() {
-        return titulo;
+    public List<Integer> getGenreIds() {
+        return genreIds;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public void setGenreIds(List<Integer> genreIds) {
+        this.genreIds = genreIds;
     }
 
-    public String getGenero() {
-        return genero;
+    public Integer getId() {
+        return id;
     }
 
-    public void setGenero(String genero) {
-        this.genero = genero;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public int getAno() {
-        return ano;
+    public String getName() {
+        return name;
     }
 
-    public void setAno(int ano) {
-        this.ano = ano;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public double getAvaliacao() {
-        return avaliacao;
+    public String getOverview() {
+        return overview;
     }
 
-    public void setAvaliacao(double avaliacao) {
-        this.avaliacao = avaliacao;
+    public void setOverview(String overview) {
+        this.overview = overview;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public String getFirstAirDate() {
+        return firstAirDate;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setFirstAirDate(String firstAirDate) {
+        this.firstAirDate = firstAirDate;
     }
 
-    public int getTemporadas() {
-        return temporadas;
+    public double getVoteAverage() {
+        return voteAverage;
     }
 
-    public void setTemporadas(int temporadas) {
-        this.temporadas = temporadas;
+    public void setVoteAverage(double voteAverage) {
+        this.voteAverage = voteAverage;
+    }
+
+    public Integer getVoteCount() {
+        return voteCount;
+    }
+
+    public void setVoteCount(Integer voteCount) {
+        this.voteCount = voteCount;
+    }
+
+    public String getPosterPath() {
+        return posterPath;
+    }
+
+    public void setPosterPath(String posterPath) {
+        this.posterPath = posterPath;
     }
 }
