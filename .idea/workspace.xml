@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="edcb916c-56d6-4cff-a715-9b7512eecdbb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="edcb916c-56d6-4cff-a715-9b7512eecdbb" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +53,7 @@
     "git-widget-placeholder": "release",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/pri05/OneDrive/Documentos/projeto-web-II",
+    "last_opened_file_path": "C:/Users/pri05/OneDrive/Documentos/projeto-web-II/Spring-CineStream",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -105,6 +101,7 @@
       <workItem from="1731178306268" duration="261000" />
       <workItem from="1731178595978" duration="717000" />
       <workItem from="1731179549605" duration="49000" />
+      <workItem from="1731260367996" duration="18000" />
     </task>
     <servers />
   </component>
