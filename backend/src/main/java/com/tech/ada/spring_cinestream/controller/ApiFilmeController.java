@@ -34,7 +34,22 @@ public class ApiFilmeController {
         filme.setAno(filmeResponse.getReleaseDate());
         filme.setAvaliacao(filmeResponse.getVoteAvarage());
         filme.setImageUrl(filmeResponse.getPosterPath());
-
-        return filmeService.saveFilme(filme);
+        Filme filmeSalvo = filmeService.savefilme(filme)
+        return ResponseEntity.status(HttpStatus.CREATED).body(filmeSalvo);
     }
+
+    @GetMapping
+    public ResponseEntity<List<Filme>> listarTodosFilmes() {
+        List<Filme> filmes = filmeService.findAllFilmes();
+        return ResponseEntity.ok(filmes);
+    }
+
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Filme> buscarFilmePorId(@PathVariable Long id) {
+        Optional<Filme> filme = filmeService.findFilmesById(id);
+        return filme.map(ResponseEntity::ok)
+                .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
+    }
+
 }

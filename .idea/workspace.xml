@@ -5,7 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="edcb916c-56d6-4cff-a715-9b7512eecdbb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Spring-CineStream.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/SpringCinestreamApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/SpringCinestreamApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/controller/ApiFilmeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/controller/ApiFilmeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/controller/FilmeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/controller/FilmeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/controller/SerieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/controller/SerieController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/dto/mapping/FilmeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/dto/mapping/FilmeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/dto/mapping/SerieMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/dto/mapping/SerieMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/dto/response/FilmeResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/dto/response/FilmeResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/dto/response/SerieResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/dto/response/SerieResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/model/Filme.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/model/Filme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/model/Serie.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/model/Serie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/model/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/repository/FilmeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/repository/FilmeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/repository/SerieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/repository/SerieRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/repository/UsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/service/FilmeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/service/FilmeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/service/SerieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/service/SerieService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/service/TmdbApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream/service/TmdbApiService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/tech/ada/spring_cinestream/SpringCinestreamApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/tech/ada/spring_cinestream/SpringCinestreamApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,26 +53,35 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature/Alecsander" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/backend/src/main/java/com/tech/ada/spring_cinestream" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "LucasAlec"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;LucasAlec&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/LucasAlec/Spring-CineStream.git",
-    "accountId": "773af7b4-9b14-4954-a091-1a9500d4a585"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/LucasAlec/Spring-CineStream.git&quot;,
+    &quot;accountId&quot;: &quot;f94f93c9-c9f9-4937-97e8-60dea5be4d78&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -42,30 +91,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/Lucas_Alecsander/Desktop/spring-cinestream",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Maven.Cine-Stream.executor&quot;: &quot;Profiler#1&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/luiz&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/luizo/Documents/Spring-CineStream/backend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/backend" />
     </key>
   </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="Application" />
+      </set>
+    </option>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
       </set>
     </attachedChunks>
   </component>
@@ -81,6 +145,15 @@
       <workItem from="1730500646185" duration="45000" />
       <workItem from="1730500710074" duration="150000" />
       <workItem from="1730502236332" duration="79000" />
+      <workItem from="1731101378903" duration="3385000" />
+      <workItem from="1731104876110" duration="116000" />
+      <workItem from="1731105003962" duration="58000" />
+      <workItem from="1731105069787" duration="266000" />
+      <workItem from="1731105500523" duration="812000" />
+      <workItem from="1731106615013" duration="408000" />
+      <workItem from="1731250275384" duration="1200000" />
+      <workItem from="1731251688576" duration="459000" />
+      <workItem from="1731284509368" duration="528000" />
     </task>
     <servers />
   </component>
