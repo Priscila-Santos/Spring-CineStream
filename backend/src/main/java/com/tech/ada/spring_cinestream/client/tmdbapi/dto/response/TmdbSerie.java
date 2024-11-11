@@ -1,4 +1,4 @@
-package com.tech.ada.spring_cinestream.dto.response;
+package com.tech.ada.spring_cinestream.client.tmdbapi.dto.response;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
@@ -7,7 +7,7 @@ import java.util.List;
 
 
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
-public class SerieResponse {
+public class TmdbSerie {
     private List<Integer> genreIds;
     private Integer id;
     private String name;
@@ -17,9 +17,9 @@ public class SerieResponse {
     private Integer voteCount;
     private String posterPath;
 
-    public SerieResponse() {}
+    public TmdbSerie() {}
 
-    public SerieResponse(List<Integer> genreIds, Integer id, String name, String overview, String firstAirDate, double voteAverage, Integer voteCount, String posterPath) {
+    public TmdbSerie(List<Integer> genreIds, Integer id, String name, String overview, String firstAirDate, double voteAverage, Integer voteCount, String posterPath) {
         this.genreIds = genreIds;
         this.id = id;
         this.name = name;

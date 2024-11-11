@@ -1,36 +1,27 @@
 package com.tech.ada.spring_cinestream.controller;
 
-import com.tech.ada.spring_cinestream.model.Filme;
+import com.tech.ada.spring_cinestream.client.tmdbapi.dto.response.Page;
+import com.tech.ada.spring_cinestream.client.tmdbapi.dto.response.TmdbFilme;
 import com.tech.ada.spring_cinestream.service.FilmeService;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/filmes")
+@RequestMapping("/api/filmes")
 public class FilmeController {
-
     private final FilmeService filmeService;
 
     public FilmeController(FilmeService filmeService) {
         this.filmeService = filmeService;
     }
 
-    @RequestMapping
-    public List<Filme> findAllFilmes() {
-        return filmeService.findAllFilmes();
-    }
-
-    @GetMapping("/{id}")
-    public ResponseEntity<Filme> getFilmesById(@PathVariable Long id) {
-        return filmeService.findFilmesById(id)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
-    }
-
-    @PostMapping
-    public Filme createMovie(@RequestBody Filme filme) {
-        return filmeService.saveFilme(filme);
+    @GetMapping
+    public Page<TmdbFilme> buscarPorTitulo(
+            @RequestParam String titulo,
+            @RequestParam(defaultValue = "1") Integer page
+    ) {
+        return buscarPorTitulo(titulo, page);
     }
 }

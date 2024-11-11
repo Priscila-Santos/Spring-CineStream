@@ -1,31 +1,24 @@
 package com.tech.ada.spring_cinestream.service;
 
-import com.tech.ada.spring_cinestream.model.Filme;
-import com.tech.ada.spring_cinestream.repository.FilmeRepository;
+import com.tech.ada.spring_cinestream.client.tmdbapi.ApiClient;
+import com.tech.ada.spring_cinestream.client.tmdbapi.dto.response.Page;
+import com.tech.ada.spring_cinestream.client.tmdbapi.dto.response.TmdbFilme;
+import com.tech.ada.spring_cinestream.repository.FilmeFavoritoRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class FilmeService {
+    private final FilmeFavoritoRepository filmeFavoritoRepository;
+    private final ApiClient tmdbClient;
 
-    private final FilmeRepository filmeRepository;
-
-    public FilmeService(FilmeRepository filmeRepository) {
-        this.filmeRepository = filmeRepository;
+    public FilmeService(FilmeFavoritoRepository filmeFavoritoRepository, ApiClient tmdbClient) {
+        this.filmeFavoritoRepository = filmeFavoritoRepository;
+        this.tmdbClient = tmdbClient;
     }
 
-    public List<Filme> findAllFilmes() {
-        return filmeRepository.findAll();
+    public Page<TmdbFilme> buscarFilmePorTitulo(String titulo, Integer page) {
+        return tmdbClient.buscarFilmesPorTitulo(titulo, page);
     }
-
-    public Optional<Filme> findFilmesById(Long id) {
-        return filmeRepository.findById(id);
-    }
-
-    public Filme saveFilme(Filme filme) {
-        return filmeRepository.save(filme);
-    }
-
 }
