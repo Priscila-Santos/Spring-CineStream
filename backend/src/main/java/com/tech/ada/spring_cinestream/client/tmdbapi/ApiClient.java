@@ -198,4 +198,26 @@ public class ApiClient {
         );
         return response.getBody();
     }
+
+    //buscar por genero na api
+    public TmdbListaGeneros buscarGeneros() {
+        String url = UriComponentsBuilder.fromHttpUrl(apiBaseUrl)
+                .path("/genre")
+                .queryParam("language", "pt-BR")
+                .toUriString();
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Authorization", String.format("Bearer %s", apiKey));
+
+        HttpEntity<String> entity = new HttpEntity<>(headers);
+
+        var response = restTemplate.exchange(
+                url,
+                HttpMethod.GET,
+                entity,
+                TmdbListaGeneros.class
+        );
+
+        return response.getBody();
+    }
 }

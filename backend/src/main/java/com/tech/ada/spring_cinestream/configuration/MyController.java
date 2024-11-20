@@ -1,4 +1,4 @@
-
+package com.tech.ada.spring_cinestream.configuration;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
