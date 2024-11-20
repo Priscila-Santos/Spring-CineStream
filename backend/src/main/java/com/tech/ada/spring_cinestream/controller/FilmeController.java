@@ -1,36 +1,35 @@
 package com.tech.ada.spring_cinestream.controller;
 
-import com.tech.ada.spring_cinestream.model.Filme;
+import com.tech.ada.spring_cinestream.client.tmdbapi.dto.response.Page;
+import com.tech.ada.spring_cinestream.client.tmdbapi.dto.response.TmdbFilme;
+import com.tech.ada.spring_cinestream.dto.request.FilmeFavoritoRequest;
+import com.tech.ada.spring_cinestream.exception.NotFoundException;
 import com.tech.ada.spring_cinestream.service.FilmeService;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
-@RequestMapping("/filmes")
+@RequestMapping("/api/filmes")
 public class FilmeController {
-
     private final FilmeService filmeService;
 
     public FilmeController(FilmeService filmeService) {
         this.filmeService = filmeService;
     }
 
-    @RequestMapping
-    public List<Filme> findAllFilmes() {
-        return filmeService.findAllFilmes();
+    @GetMapping
+    public Page<TmdbFilme> buscarPorTitulo(
+            @RequestParam String titulo,
+            @RequestParam(defaultValue = "1") Integer page
+    ) {
+        return filmeService.buscarFilmePorTitulo(titulo, page);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<Filme> getFilmesById(@PathVariable Long id) {
-        return filmeService.findFilmesById(id)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
-    }
-
-    @PostMapping
-    public Filme createMovie(@RequestBody Filme filme) {
-        return filmeService.saveFilme(filme);
+    @PostMapping("/favorito")
+    @ResponseStatus(HttpStatus.CREATED)
+    public void adicionarFilmeFavorito(
+            @RequestBody FilmeFavoritoRequest filmeFavoritoRequest
+            ) throws NotFoundException {
+        filmeService.adicionarFilmeFavorito(filmeFavoritoRequest);
     }
 }

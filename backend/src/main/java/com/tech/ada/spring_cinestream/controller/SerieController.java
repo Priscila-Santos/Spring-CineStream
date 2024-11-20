@@ -1,14 +1,16 @@
 package com.tech.ada.spring_cinestream.controller;
 
-import com.tech.ada.spring_cinestream.model.Serie;
+import com.tech.ada.spring_cinestream.client.tmdbapi.dto.response.Page;
+import com.tech.ada.spring_cinestream.client.tmdbapi.dto.response.TmdbSerie;
+import com.tech.ada.spring_cinestream.dto.request.FilmeFavoritoRequest;
+import com.tech.ada.spring_cinestream.dto.request.SerieFavoritaRequest;
+import com.tech.ada.spring_cinestream.exception.NotFoundException;
 import com.tech.ada.spring_cinestream.service.SerieService;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
-@RequestMapping("/series")
+@RequestMapping("/api/series")
 public class SerieController {
     private final SerieService serieService;
 
@@ -17,19 +19,19 @@ public class SerieController {
     }
 
     @GetMapping
-    public List<Serie> getAllSeries() {
-        return serieService.findAllSeries();
+    public Page<TmdbSerie> buscarPorTitulo(
+            @RequestParam String titulo,
+            @RequestParam(defaultValue = "1") Integer page
+    ) {
+        return serieService.buscarSeriePorTitulo(titulo, page);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<Serie> getSeriesById(@PathVariable Long id) {
-        return serieService.findSeriesById(id)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
+    @PostMapping("/favorita")
+    @ResponseStatus(HttpStatus.CREATED)
+    public void adicionarSerieFavorita(
+            @RequestBody SerieFavoritaRequest serieFavoritaRequest
+            ) throws NotFoundException {
+        serieService.adicionarSerieFavorita(serieFavoritaRequest);
     }
 
-    @PostMapping
-    public Serie createSeries(@RequestBody Serie serie) {
-        return serieService.saveSeries(serie);
-    }
 }

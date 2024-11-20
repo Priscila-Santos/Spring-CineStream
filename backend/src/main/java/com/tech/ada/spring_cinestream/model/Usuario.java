@@ -12,26 +12,19 @@ public class Usuario {
     private Long id;
 
     private String nome;
-
+    private String nickName;
     private String email;
-
     private String senha;
 
-    @ElementCollection
-    @CollectionTable(name = "generos_favoritos", joinColumns = @JoinColumn(name = "usuario_id"))
-    @Column(name = "genero")
-    private List<String> generosFavoritos;
-
     // Construtores, getters e setters
-
     public Usuario() {
     }
 
-    public Usuario(String nome, String email, String senha, List<String> generosFavoritos) {
+    public Usuario(String nome, String nickName, String email, String senha) {
         this.nome = nome;
+        this.nickName = nickName;
         this.email = email;
         this.senha = senha;
-        this.generosFavoritos = generosFavoritos;
     }
 
     public Long getId() {
@@ -66,12 +59,12 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public List<String> getGenerosFavoritos() {
-        return generosFavoritos;
+    public String getNickName() {
+        return nickName;
     }
 
-    public void setGenerosFavoritos(List<String> generosFavoritos) {
-        this.generosFavoritos = generosFavoritos;
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
     }
 }
 

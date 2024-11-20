@@ -1,22 +1,24 @@
-package com.tech.ada.spring_cinestream.dto.response;
+package com.tech.ada.spring_cinestream.client.tmdbapi.dto.response;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
-public class FilmeResponse {
+public class TmdbFilme {
     private String title;
     private String overview;
     private String releaseDate;
     private double voteAverage;
     private String posterPath;
+    private Long id;
 
-    public FilmeResponse(String title, String overview, String releaseDate, double voteAverage, String posterPath) {
+    public TmdbFilme(String title, String overview, String releaseDate, double voteAverage, String posterPath, Long id) {
         this.title = title;
         this.overview = overview;
         this.releaseDate = releaseDate;
         this.voteAverage = voteAverage;
         this.posterPath = posterPath;
+        this.id = id;
     }
 
     public String getTitle() {
@@ -57,5 +59,13 @@ public class FilmeResponse {
 
     public void setPosterPath(String posterPath) {
         this.posterPath = posterPath;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

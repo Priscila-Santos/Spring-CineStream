@@ -1,35 +1,40 @@
 package com.tech.ada.spring_cinestream.service;
 
-import com.tech.ada.spring_cinestream.model.Serie;
-import com.tech.ada.spring_cinestream.repository.SerieRepository;
+import com.tech.ada.spring_cinestream.client.tmdbapi.ApiClient;
+import com.tech.ada.spring_cinestream.client.tmdbapi.dto.response.Page;
+import com.tech.ada.spring_cinestream.client.tmdbapi.dto.response.TmdbSerie;
+import com.tech.ada.spring_cinestream.dto.mapping.FilmeFavoritoMapper;
+import com.tech.ada.spring_cinestream.dto.mapping.SerieFavoritaMapper;
+import com.tech.ada.spring_cinestream.dto.request.FilmeFavoritoRequest;
+import com.tech.ada.spring_cinestream.dto.request.SerieFavoritaRequest;
+import com.tech.ada.spring_cinestream.exception.NotFoundException;
+import com.tech.ada.spring_cinestream.model.FilmeFavorito;
+import com.tech.ada.spring_cinestream.model.SerieFavorita;
+import com.tech.ada.spring_cinestream.model.Usuario;
+import com.tech.ada.spring_cinestream.repository.SerieFavoritaRepository;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
-import java.util.Optional;
 
 @Service
 public class SerieService {
 
-    private final SerieRepository serieRepository;
+    private final SerieFavoritaRepository serieFavoritaRepository;
+    private final ApiClient tmdbClient;
+    private final UsuarioService usuarioService;
 
-    public SerieService(SerieRepository serieRepository) {
-        this.serieRepository = serieRepository;
+    public SerieService(SerieFavoritaRepository serieFavoritaRepository, ApiClient tmdbClient, UsuarioService usuarioService) {
+        this.serieFavoritaRepository = serieFavoritaRepository;
+        this.tmdbClient = tmdbClient;
+        this.usuarioService = usuarioService;
     }
 
-    public List<Serie> findAllSeries() {
-        return serieRepository.findAll();
+    public Page<TmdbSerie> buscarSeriePorTitulo(String titulo, Integer page) {
+        return tmdbClient.buscarSeriesPorTitulo(titulo, page);
     }
 
-    public Optional<Serie> findSeriesById(Long id) {
-        return serieRepository.findById(id);
+    public void adicionarSerieFavorita(SerieFavoritaRequest serieFavoritaRequest) throws NotFoundException {
+        Usuario usuario = usuarioService.buscarPorId(serieFavoritaRequest.getIdUsuario());
+        SerieFavoritaMapper mapper = new SerieFavoritaMapper();
+        SerieFavorita serieFavorita = mapper.toEntity(serieFavoritaRequest, usuario);
+        serieFavoritaRepository.save(serieFavorita);
     }
-
-    public Serie saveSeries(Serie serie) {
-        return serieRepository.save(serie);
-    }
-
-    // Series Para voce
-
-    //Filmes para voce
-
 }
