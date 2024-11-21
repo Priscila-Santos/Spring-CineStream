@@ -2,6 +2,7 @@ package com.tech.ada.spring_cinestream.service;
 
 import com.tech.ada.spring_cinestream.client.tmdbapi.ApiClient;
 import com.tech.ada.spring_cinestream.client.tmdbapi.dto.response.Page;
+import com.tech.ada.spring_cinestream.client.tmdbapi.dto.response.TmdbFilme;
 import com.tech.ada.spring_cinestream.client.tmdbapi.dto.response.TmdbSerie;
 import com.tech.ada.spring_cinestream.dto.mapping.FilmeFavoritoMapper;
 import com.tech.ada.spring_cinestream.dto.mapping.SerieFavoritaMapper;
@@ -25,6 +26,10 @@ public class SerieService {
         this.serieFavoritaRepository = serieFavoritaRepository;
         this.tmdbClient = tmdbClient;
         this.usuarioService = usuarioService;
+    }
+
+    public Page<TmdbSerie> buscarTodasSeries(Integer page) {
+        return tmdbClient.buscarTodasSeries(page);
     }
 
     public Page<TmdbSerie> buscarSeriePorTitulo(String titulo, Integer page) {

@@ -24,6 +24,10 @@ public class FilmeService {
         this.tmdbClient = tmdbClient;
     }
 
+    public Page<TmdbFilme> buscarTodosFilmes(Integer page) {
+        return tmdbClient.buscarTodosFilmes(page);
+    }
+
     public Page<TmdbFilme> buscarFilmePorTitulo(String titulo, Integer page) {
         return tmdbClient.buscarFilmesPorTitulo(titulo, page);
     }

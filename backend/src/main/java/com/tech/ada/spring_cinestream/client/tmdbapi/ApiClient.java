@@ -27,6 +27,28 @@ public class ApiClient {
     // ENDPOINTS da API externa
 
     //FILMES
+    public Page<TmdbFilme> buscarTodosFilmes(Integer page) {
+        String url = UriComponentsBuilder.fromHttpUrl(apiBaseUrl)
+                .path("discover/movie")
+                .queryParam("page", page)
+                .queryParam("language", "pt-BR")
+                .toUriString();
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Authorization", String.format("Bearer %s", apiKey));
+
+        HttpEntity<String> entity = new HttpEntity<>(headers);
+
+        var response = restTemplate.exchange(
+                url,
+                HttpMethod.GET,
+                entity,
+                new ParameterizedTypeReference<Page<TmdbFilme>>() {}
+        );
+        return response.getBody();
+    }
+
+
     public Page<TmdbFilme> buscarFilmesPorTitulo(String titulo, Integer page) {
         String url = UriComponentsBuilder.fromHttpUrl(apiBaseUrl)
                 .path("/search/movie")
@@ -113,6 +135,27 @@ public class ApiClient {
 
 
     // SERIES
+    public Page<TmdbSerie> buscarTodasSeries(Integer page) {
+        String url = UriComponentsBuilder.fromHttpUrl(apiBaseUrl)
+                .path("discover/serie")
+                .queryParam("page", page)
+                .queryParam("language", "pt-BR")
+                .toUriString();
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Authorization", String.format("Bearer %s", apiKey));
+
+        HttpEntity<String> entity = new HttpEntity<>(headers);
+
+        var response = restTemplate.exchange(
+                url,
+                HttpMethod.GET,
+                entity,
+                new ParameterizedTypeReference<Page<TmdbSerie>>() {}
+        );
+        return response.getBody();
+    }
+
     public Page<TmdbSerie> buscarSeriesPorTitulo(String titulo, Integer page) {
         String url = UriComponentsBuilder.fromHttpUrl(apiBaseUrl)
                 .path("/search/tv")

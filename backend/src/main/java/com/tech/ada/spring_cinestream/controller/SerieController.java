@@ -1,6 +1,7 @@
 package com.tech.ada.spring_cinestream.controller;
 
 import com.tech.ada.spring_cinestream.client.tmdbapi.dto.response.Page;
+import com.tech.ada.spring_cinestream.client.tmdbapi.dto.response.TmdbFilme;
 import com.tech.ada.spring_cinestream.client.tmdbapi.dto.response.TmdbSerie;
 import com.tech.ada.spring_cinestream.dto.request.FilmeFavoritoRequest;
 import com.tech.ada.spring_cinestream.dto.request.SerieFavoritaRequest;
@@ -16,6 +17,13 @@ public class SerieController {
 
     public SerieController(SerieService serieService) {
         this.serieService = serieService;
+    }
+
+    @GetMapping("/todos")
+    public Page<TmdbSerie> getTodasSeries(
+            @RequestParam(defaultValue = "1") Integer page
+    ) {
+        return serieService.buscarTodasSeries(page);
     }
 
     @GetMapping

@@ -17,6 +17,13 @@ public class FilmeController {
         this.filmeService = filmeService;
     }
 
+    @GetMapping("/todos")
+    public Page<TmdbFilme> getTodosFilme(
+            @RequestParam(defaultValue = "1") Integer page
+    ) {
+        return filmeService.buscarTodosFilmes(page);
+    }
+
     @GetMapping
     public Page<TmdbFilme> buscarPorTitulo(
             @RequestParam String titulo,
