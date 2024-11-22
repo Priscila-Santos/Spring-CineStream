@@ -3,6 +3,7 @@ package com.tech.ada.spring_cinestream.service;
 import com.tech.ada.spring_cinestream.client.tmdbapi.ApiClient;
 import com.tech.ada.spring_cinestream.client.tmdbapi.dto.response.Page;
 import com.tech.ada.spring_cinestream.client.tmdbapi.dto.response.TmdbFilme;
+import com.tech.ada.spring_cinestream.client.tmdbapi.dto.response.TmdbListaGeneros;
 import com.tech.ada.spring_cinestream.dto.mapping.FilmeFavoritoMapper;
 import com.tech.ada.spring_cinestream.dto.request.FilmeFavoritoRequest;
 import com.tech.ada.spring_cinestream.exception.NotFoundException;
@@ -17,11 +18,13 @@ public class FilmeService {
     private final FilmeFavoritoRepository filmeFavoritoRepository;
     private final UsuarioService usuarioService;
     private final ApiClient tmdbClient;
+    private final ApiClient apiClient;
 
-    public FilmeService(FilmeFavoritoRepository filmeFavoritoRepository, UsuarioService usuarioService, ApiClient tmdbClient) {
+    public FilmeService(FilmeFavoritoRepository filmeFavoritoRepository, UsuarioService usuarioService, ApiClient tmdbClient, ApiClient apiClient) {
         this.filmeFavoritoRepository = filmeFavoritoRepository;
         this.usuarioService = usuarioService;
         this.tmdbClient = tmdbClient;
+        this.apiClient = apiClient;
     }
 
     public Page<TmdbFilme> buscarTodosFilmes(Integer page) {
@@ -39,5 +42,9 @@ public class FilmeService {
         FilmeFavorito filmeFavorito = mapper.toEntity(filmeFavoritoRequest, usuario);
 
         filmeFavoritoRepository.save(filmeFavorito);
+    }
+
+    public TmdbListaGeneros buscarGeneros() {
+        return apiClient.generosFilmes();
     }
 }

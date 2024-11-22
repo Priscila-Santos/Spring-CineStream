@@ -2,14 +2,16 @@ package com.tech.ada.spring_cinestream.controller;
 
 import com.tech.ada.spring_cinestream.client.tmdbapi.dto.response.Page;
 import com.tech.ada.spring_cinestream.client.tmdbapi.dto.response.TmdbFilme;
+import com.tech.ada.spring_cinestream.client.tmdbapi.dto.response.TmdbListaGeneros;
 import com.tech.ada.spring_cinestream.dto.request.FilmeFavoritoRequest;
 import com.tech.ada.spring_cinestream.exception.NotFoundException;
 import com.tech.ada.spring_cinestream.service.FilmeService;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/filmes")
+@RequestMapping("/api")
 public class FilmeController {
     private final FilmeService filmeService;
 
@@ -17,11 +19,17 @@ public class FilmeController {
         this.filmeService = filmeService;
     }
 
-    @GetMapping("/todos")
+    @GetMapping("/filmes/todos")
     public Page<TmdbFilme> getTodosFilme(
             @RequestParam(defaultValue = "1") Integer page
     ) {
         return filmeService.buscarTodosFilmes(page);
+    }
+
+    @GetMapping("/genres")
+    public ResponseEntity<TmdbListaGeneros> getGenres() {
+        TmdbListaGeneros generos = filmeService.buscarGeneros();
+        return ResponseEntity.ok(generos);
     }
 
     @GetMapping
